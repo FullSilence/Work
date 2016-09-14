@@ -15,6 +15,8 @@ namespace Test11
 		
 		private int heightScreen = 24;
 		private int widthScreen = 80;
+		
+		private	long seed	= 186135498L;
 
 		#endregion
 		
@@ -80,6 +82,18 @@ namespace Test11
 			}
 		}
 		
+		public long Seed 
+		{
+			get 
+			{
+				return seed;
+			}
+			set 
+			{
+				seed = value;
+			}
+		}
+
 		#endregion
 	}
 }

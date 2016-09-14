@@ -17,7 +17,32 @@ namespace Test11
 			
 			chunk.Draw();
 	
-			Console.ReadKey(true);
+			
+			while (true) 
+			{
+				switch (Console.ReadKey(true).Key) 
+				{
+					case ConsoleKey.LeftArrow:
+						chunk.PositionHeroX--;
+						chunk.Draw();
+						break;
+					case ConsoleKey.RightArrow:
+						chunk.PositionHeroX++;
+						chunk.Draw();
+						break;
+					case ConsoleKey.UpArrow:
+						chunk.PositionHeroY--;
+						chunk.Draw();
+						break;
+					case ConsoleKey.DownArrow:
+						chunk.PositionHeroY++;
+						chunk.Draw();
+						break;
+					case ConsoleKey.Escape:
+						Environment.Exit(0);
+						break;
+				}
+			}
 		}
 	}	
 	
@@ -44,7 +69,7 @@ namespace Test11
 		{
 			int firstKey = this.GetFirstKey();
 			int fromY = firstKey + HeightScreen / 2 - PositionHeroY;
-			int toY = firstKey + blockList.Count < PositionHeroY * 2 ? blockList.Count : PositionHeroY * 2;
+			int toY = firstKey + blockList.Count < PositionHeroY * 2 ? blockList.Count : PositionHeroY * 2;		
 			
 			for (int y = fromY; y <= toY; y++)
 			{
@@ -63,11 +88,11 @@ namespace Test11
 			return enumerator.Current.Key;
 		}
 		
-		public Column()
+		public Column( int y )
 		{
-			for (int y = 4; y <= 100; y++) 
+			for (int i = y; i <= 100; i++) 
 			{
-				this.blockList.Add(y, new Block('#') );
+				this.blockList.Add(i, new Block('#') );
 			}
 		}
 	}
@@ -82,18 +107,26 @@ namespace Test11
 		{
 			this.ChunkSize = chunkSize;
 			
-			for (int x = 0; x < chunkSize; x++) 
+			PerlinNoise perlinNoise = new PerlinNoise(Seed);
+
+			for (int x = 0; x <= chunkSize; x++)
 			{
-				columnList.Add(x, new Column());
+			
+				var y = perlinNoise.getNoise(x, 20);				
+				
+				columnList.Add(x, new Column( y ));
 			}
 		}
 		
 		public void Draw()
 		{
+			Console.Clear();
 			int firstKey = this.GetFirstKey();
 			int fromX = firstKey + WidthScreen / 2 - PositionHeroX;
 			int toX = firstKey + columnList.Count < PositionHeroX * 2 ? columnList.Count : PositionHeroX * 2;
-
+			
+			int sad = (WidthScreen / 2 - PositionHeroX) + WidthScreen;
+			//toX = sad;				
 			for (int x = fromX; x < toX; x++)
 			{
 				columnList[x].Draw(x);

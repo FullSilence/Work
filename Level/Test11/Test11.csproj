@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="BaseParam.cs" />
     <Compile Include="ConsoleLocal.cs" />
+    <Compile Include="PerlinNoise.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
