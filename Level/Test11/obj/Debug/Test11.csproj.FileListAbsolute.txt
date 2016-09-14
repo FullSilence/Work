@@ -1,0 +1,6 @@
+C:\Users\Khromov\Documents\SharpDevelop Projects\Level\Test11\obj\Debug\Test11.csprojResolveAssemblyReference.cache
+C:\Users\Khromov\Documents\SharpDevelop Projects\Level\Test11\bin\Debug\Test11.exe.config
+C:\Users\Khromov\Documents\SharpDevelop Projects\Level\Test11\bin\Debug\Test11.exe
+C:\Users\Khromov\Documents\SharpDevelop Projects\Level\Test11\bin\Debug\Test11.pdb
+C:\Users\Khromov\Documents\SharpDevelop Projects\Level\Test11\obj\Debug\Test11.exe
+C:\Users\Khromov\Documents\SharpDevelop Projects\Level\Test11\obj\Debug\Test11.pdb

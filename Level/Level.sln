@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 5.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Level", "Level\Level.csproj", "{7F0A7854-9A00-41AC-AA53-FDEC1B5C495D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test11", "Test11\Test11.csproj", "{EEBA89CA-A06C-436B-9AA9-0110CB4DC0FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F0A7854-9A00-41AC-AA53-FDEC1B5C495D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F0A7854-9A00-41AC-AA53-FDEC1B5C495D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F0A7854-9A00-41AC-AA53-FDEC1B5C495D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F0A7854-9A00-41AC-AA53-FDEC1B5C495D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEBA89CA-A06C-436B-9AA9-0110CB4DC0FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEBA89CA-A06C-436B-9AA9-0110CB4DC0FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEBA89CA-A06C-436B-9AA9-0110CB4DC0FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEBA89CA-A06C-436B-9AA9-0110CB4DC0FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
